@@ -1,13 +1,17 @@
+#!/bin/python3
+
 import sys
 
 
 t = int(input().strip())
-
+def ar(x):
+    return x*(x+1);
 for a0 in range(t):
-    l=[]
-    n = int(input().strip())
-    for i in range(1,n):
-        if(i%3==0 or i%5==0):
-            l.append(i)
-    print(sum(l))
+    n =int(input())
+    n -=1;
+    a=int(n/3);
+    b=int(n/5);
+    c=int(n/15);
+    print(int(int(3*ar(a) + 5*ar(b) - 15*ar(c))>>1));
+  
 
